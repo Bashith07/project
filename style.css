@@ -1,0 +1,272 @@
+/* ===== BASIC RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== CONTAINERS ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #ffffffb3;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.logo span {
+  color: #4b8cff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #4b8cff;
+}
+
+/* ===== NAV TOGGLE ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px 70px;
+  background: linear-gradient(135deg, #e3f2ff, #fdfbfb);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.hero h1 span {
+  color: #4b8cff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #4b8cff;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+/* ===== POSTS ===== */
+.posts {
+  padding: 60px 0;
+}
+
+.posts h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.post {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-body {
+  padding: 18px;
+}
+
+.post-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.post-body p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.read-more {
+  color: #4b8cff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* ===== CONTACT / ABOUT / ADD POST ===== */
+.contact, .add-post, .about {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 220px;
+  width: 100%;
+}
+
+.social a {
+  color: #3b82f6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #f1f5ff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 60px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #4b8cff;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #1e293b;
+    top: 65px;
+    right: 20px;
+    width: 180px;
+    border-radius: 8px;
+    text-align: right;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #fff;
+    padding: 10px;
+  }
+
+  .nav-links a:hover {
+    color: #4b8cff;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .post img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}

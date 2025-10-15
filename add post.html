@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+    <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Journey<span>Blog</span></div>
+     
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="add post.html">Add Post</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+       <!-- Add New Post (optional admin form) -->
+<div class="add-post">
+      <h3>Add a New Blog Post</h3>
+      <form id="postForm">
+        <input type="text" id="title" placeholder="Post Title" required>
+        <Input type ="file" Id ="upload" name="image" accept="image/*" required>
+        <textarea id="content" placeholder="Write your post here..." required></textarea>
+        <button type="submit">Publish Post</button>
+      </form>    
+    </div>
+</body>
+</html>
