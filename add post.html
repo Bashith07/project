@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <link rel="stylesheet" href="style.css" >
-</head>
+     <link rel="icon" type="image/jpeg" sizes="16x16" href="image/Favicon.png">
 <body>
     <header class="navbar">
     <div class="container nav-container">
       <div class="logo">Journey<span>Blog</span></div>
      
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="add post.html">Add Post</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="cross">&times;</div>
+      <ul class="nav-links2">
         <li><a href="index.html">Home</a></li>
         <li><a href="blog.html" class="active">Blog</a></li>
           <li><a href="add post.html">Add Post</a></li>
@@ -31,5 +39,12 @@
         <button type="submit">Publish Post</button>
       </form>    
     </div>
+     <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Journey Blog — All Rights Reserved</p>
+    </div>
+  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
