@@ -6,22 +6,29 @@
   <title>Journey Blog — Home</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/jpeg" sizes="16x16" href="image/Favicon.png">
 </head>
 <body class="home-page">
   <!-- Navbar -->
   <header class="navbar">
     <div class="container nav-container">
       <div class="logo">Journey<span>Blog</span></div>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
+       <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle" >☰</button>
+       <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
           <li><a href="add post.html">Add Post</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+       <div class="cross">&times;</div>
+      <ul class="nav-links2">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="add post.html">Add Post</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </header>
 
@@ -43,6 +50,6 @@
       </div>
     </div>
   </footer>
-  </style>
+  <script src="script.js"></script>
 </body>
 </html>
