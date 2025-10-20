@@ -10,6 +10,9 @@ body {
   background: #fdfdfd;
   color: #222;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ===== CONTAINERS ===== */
@@ -21,7 +24,7 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: #ffffffb3;
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -71,6 +74,7 @@ body {
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 /* ===== HERO SECTION ===== */
@@ -79,6 +83,7 @@ body {
   padding: 100px 20px 70px;
   background: linear-gradient(135deg, #e3f2ff, #fdfbfb);
   border-bottom: 1px solid #e5e5e5;
+  flex: 1 0 auto;
 }
 
 .hero h1 {
@@ -212,6 +217,7 @@ footer {
   margin-top: 60px;
   color: #555;
   font-size: 0.95rem;
+  flex-shrink: 0;
 }
 
 footer a {
@@ -219,38 +225,78 @@ footer a {
   text-decoration: none;
 }
 
+/* ===== EXTRA NAV MENU (SECONDARY) ===== */
+.nav-links2 {
+  display: none;
+  position: relative;
+  top: 36px;
+}
+
+.nav-links2 li, 
+.nav-links2 a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+}
+
+.cross {
+  cursor: pointer;
+  position: relative;
+  left: 30vw;
+  bottom: 55px;
+  font-size: 23px;
+  display: none;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+
   .nav-toggle {
     display: block;
   }
-
+.navbar ul,
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
     background: #1e293b;
-    top: 65px;
-    right: 20px;
-    width: 180px;
-    border-radius: 8px;
-    text-align: right;
-    padding: 10px;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0;
+    height: 50%;
+    transition: all 0.4s ease;
+    animation: slideDown 0.4s ease;
+    font-size: 10px;
   }
 
+  .navbar ul.active,
   .nav-links.active {
     display: flex;
+    height: 67vh;
+    opacity: 1;
+    
   }
 
-  .nav-links a {
-    color: #fff;
-    padding: 10px;
+  .nav-links li,
+  .navbar ul li {
+    margin: 20px 0;
+    text-align: center; 
   }
 
-  .nav-links a:hover {
-    color: #4b8cff;
+  .nav-links li a {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
   }
-
   .hero h1 {
     font-size: 2.2rem;
   }
